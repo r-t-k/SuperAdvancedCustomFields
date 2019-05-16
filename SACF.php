@@ -3,7 +3,7 @@
 Plugin Name: Super Advanced Custom Fields
 Plugin URI: https://kyser.io/SACF
 Description: ACF Pro Supercharged
-Version: 0.0.0.1
+Version: 0.0.0.2
 Author: Tommy Kyser
 Author URI: https://kyser.io
 Text Domain: SACF
@@ -25,7 +25,7 @@ require_once plugin_dir_path( __FILE__ ) . 'lib/wp-package-updater/class-wp-pack
 /*  $kyserframework = new WP_Package_Updater(
 	'https://update.kyser.io',
  	wp_normalize_path( __FILE__ ),
-	wp_normalize_path( ABSPATH . 'wp-content/plugins/abstract/' ),
+	wp_normalize_path( ABSPATH . 'wp-content/plugins/SACF/' ),
 	true
 );*/
 /** Enable plugin updates without license check **/
@@ -44,7 +44,7 @@ function run() {
 add_action( 'plugins_loaded', 'run', 10, 0 );
 function load_SACF_init() // Classes :: Hook = init
 {
-	require __DIR__ . '/super-advanced-custom-fields/loader.php';
+	require __DIR__ . '/loader.php';
 }
 
 add_action( 'acf/init', 'load_SACF_init', 10 );

@@ -98,3 +98,8 @@ function new_group($key, $title, $param, $operator, $value, $hide = false){
 function new_flex($parent, $key, $label){
 	return new \Kyser\SACF\FlexibleContent($parent, $key, $label);
 }
+//Repeater
+//new \Kyser\SACF\Repeater('static', 'flex', 'SACF Flexible Content');
+function new_repeater($parent, $key, $label){
+	return new \Kyser\SACF\Repeater($parent, $key, $label);
+}
