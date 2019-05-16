@@ -88,8 +88,8 @@ function admin_sub_group($key, $title, $option_page){
 function new_admin_group($key, $title, $option_page){
 	return new \Kyser\SACF\Group($key, $title, false,  $option_page);
 }
-function new_group($key, $title, $param, $operator, $value, $hide = false){
-	$group = new \Kyser\SACF\Group($key, $title, false, false);
+function new_group($key, $title, $param, $operator, $value, $order=0, $hide = false){
+	$group = new \Kyser\SACF\Group($key, $title, $order,false, false);
 	$group->location($param, $operator, $value);
 	$group->build();
 }
