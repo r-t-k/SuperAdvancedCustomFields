@@ -3,7 +3,7 @@
 Plugin Name: Super Advanced Custom Fields
 Plugin URI: https://kyser.io/SACF
 Description: ACF Pro Supercharged
-Version: 0.0.0.4
+Version: 0.0.0.3
 Author: Tommy Kyser
 Author URI: https://kyser.io
 Text Domain: SACF
