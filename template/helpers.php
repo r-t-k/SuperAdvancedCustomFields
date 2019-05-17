@@ -83,10 +83,10 @@ function get_admin_field ($key){
 
 
 function admin_sub_group($key, $title, $option_page){
-	return new \Kyser\SACF\Group($key, $title, false,'acf-options-'.$option_page);
+	return new \Kyser\SACF\Group($key, $title, $order = 0, false,'acf-options-'.$option_page);
 }
 function new_admin_group($key, $title, $option_page){
-	return new \Kyser\SACF\Group($key, $title, false,  $option_page);
+	return new \Kyser\SACF\Group($key, $title,  $order = 0,false,  $option_page);
 }
 function new_group($key, $title, $param, $operator, $value, $order=0, $hide = false){
 	$group = new \Kyser\SACF\Group($key, $title, $order,false, false);
