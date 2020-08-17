@@ -17,12 +17,20 @@ class Repeater {
 	private $args = array();
 	private $sub_fields = array();
 
-	public function __construct( $parent, $key, $label ) {
-		$this->args['parent'] = $parent;
-		$this->args['key']    = $key;
-		$this->args['name']   = $key;
-		$this->args['label']  = $label;
-		$this->args['type']   = 'repeater';
+	public function __construct( $parent, $key, $label, $noParent = false ) {
+		if(!$noParent){
+			$this->args['parent'] = $parent;
+			$this->args['key']    = $key;
+			$this->args['name']   = $key;
+			$this->args['label']  = $label;
+			$this->args['type']   = 'repeater';
+		}
+		if($noParent){
+			$this->args['key']    = $key;
+			$this->args['name']   = $key;
+			$this->args['label']  = $label;
+			$this->args['type']   = 'repeater';
+		}
 	}
 	public function add_sub_field( $name, $args ) {
 		$field                                       = array(
@@ -50,5 +58,9 @@ class Repeater {
 	public function build() {
 		$this->prepare();
 		acf_add_local_field( $this->args );
+	}
+	public function export() {
+		$this->prepare();
+		return $this->args;
 	}
 }

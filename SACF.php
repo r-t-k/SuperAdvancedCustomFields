@@ -20,7 +20,7 @@ ini_set( 'xdebug.var_display_max_data', '-1' );*/
 /*                                  WP Plugin Update Server                                         */
 /* ================================================================================================ */
 
-require_once plugin_dir_path( __FILE__ ) . 'lib/wp-package-updater/class-wp-package-updater.php';
+/*require_once plugin_dir_path( __FILE__ ) . 'lib/wp-package-updater/class-wp-package-updater.php';*/
 /** Enable plugin updates with license check **/
 /*  $kyserframework = new WP_Package_Updater(
 	'https://update.kyser.io',
@@ -29,12 +29,12 @@ require_once plugin_dir_path( __FILE__ ) . 'lib/wp-package-updater/class-wp-pack
 	true
 );*/
 /** Enable plugin updates without license check **/
-$SACF = new WP_Package_Updater(
+/*$SACF = new WP_Package_Updater(
 	'https://update.kyser.io',
 	wp_normalize_path( __FILE__ ),
 	wp_normalize_path( ABSPATH . 'wp-content/plugins/sacf/' ),
 	true
-);
+);*/
 /* ================================================================================================ */
 
 function run() {
