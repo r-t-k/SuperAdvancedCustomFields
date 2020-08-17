@@ -1,5 +1,5 @@
 <?php
-require_once ABSPATH . 'wp-content/plugins/sacf/class-tgm-plugin-activation.php';
+require_once plugin_dir_path( __FILE__ ) . 'class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'kf_register_required_plugins' );
 
