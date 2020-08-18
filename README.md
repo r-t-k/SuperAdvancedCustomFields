@@ -8,3 +8,8 @@ This is meant for developers and will not offer much for designers or end users 
 ACF pro is bundled with this plugin.
 
 I will be adding full documentation and a plugin update server in the future.
+
+
+Download: https://wp.kyser.dev/wp-content/wppus/packages/SuperAdvancedCustomFields.zip
+
+Upload, install, activate.
